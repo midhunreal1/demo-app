@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="app">
+      <header className="app-header">
+        <div className="container">
+          <h1 className="welcome-title">
+            Welcome to My React App
+          </h1>
+          <p className="welcome-subtitle">
+            Built with Vite ⚡ and deployed with GitHub Actions
+          </p>
+          <div className="features">
+            <div className="feature-card">
+              <h3>⚡ Lightning Fast</h3>
+              <p>Powered by Vite for instant dev server startup</p>
+            </div>
+            <div className="feature-card">
+              <h3>🚀 Auto Deploy</h3>
+              <p>CI/CD pipeline with GitHub Actions</p>
+            </div>
+            <div className="feature-card">
+              <h3>📱 Modern React</h3>
+              <p>Latest React features and best practices</p>
+            </div>
+          </div>
+          <div className="cta-section">
+            <button className="cta-button" onClick={() => alert('Welcome to the app!')}>
+              Get Started
+            </button>
+            <a 
+              href="https://github.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="github-link"
+            >
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+  );
 }
 
-export default App
+export default App;
